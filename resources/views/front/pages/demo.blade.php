@@ -3,10 +3,11 @@
 
 
 @section('content')
+
 @section('title','demo')
 
 
-    <!-- Content
+    <!-- Content .
     ================================================== -->
     <div class="s-content">
 
