@@ -25,3 +25,6 @@ use Illuminate\Support\Facades\Route;
     });*/
 
 Route::get('/',[Homecontroller::class,'index']);
+Route::get('/pages/{name}',[Homecontroller::class,'show']);
+
+
