@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>@yield('title','Home')|{{config('app.name')}}</title>
+    <title>@yield('title','Home') | {{config('app.name')}}</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -52,7 +52,7 @@
 
             <div class="s-header__content column">
                 <h1 class="s-header__logotext">
-                    <a href="index.html" title="">Keep It Simple.</a>
+                    <a href="{{route('Home')}}" title="">Keep It Simple.</a>
                 </h1>
                 <p class="s-header__tagline">Put your awesome tagline here.</p>
             </div>
@@ -64,7 +64,7 @@
            <div class="row">
 
                 <ul class="s-header__nav">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{route('Home')}}">Home</a></li>
                     <li class="has-children"><a href="#0">Dropdown</a>
                         <ul>
                             <li><a href="#0">Submenu 01</a></li>
@@ -72,15 +72,15 @@
                             <li><a href="#0">Submenu 03</a></li>
                         </ul>
                     </li>
-                    <li><a href="demo.html">Demo</a></li>	
-                    <li class="current"><a href="archives.html">Archives</a></li>
+                    <li><a href="{{route('pages',['name'=>'demo'])}}">Demo</a></li>	
+                    <li class="current"><a href="{{route('pages',['name'=>'archives'])}}">Archives</a></li>
                     <li class="has-children"><a href="#0">Blog</a>
                         <ul>
-                            <li><a href="blog.html">Blog Entries</a></li>
-                            <li><a href="single.html">Single Blog</a></li>
+                            <li><a href="{{route('pages',['name'=>'Blog Entries'])}}">Blog Entries</a></li>
+                            <li><a href="{{route('pages',['name'=>'single Blog'])}}">Single Blog</a></li>
                         </ul>
                     </li>
-                    <li><a href="page.html">Page</a></li>
+                    <li><a href="{{route('pages',['name'=>'page'])}}">Page</a></li>
                 </ul> <!-- end #nav -->
 
            </div> 

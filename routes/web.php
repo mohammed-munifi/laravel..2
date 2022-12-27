@@ -24,7 +24,8 @@ use Illuminate\Support\Facades\Route;
         return view('index');
     });*/
 
-Route::get('/',[Homecontroller::class,'index']);
-Route::get('/pages/{name}',[Homecontroller::class,'show']);
+Route::get('/',[Homecontroller::class,'index'])->name('Home');
+
+Route::get('/pages/{name}',[Homecontroller::class,'show'])->name('pages');
 
 
