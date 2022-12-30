@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Homecontroller;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +28,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[Homecontroller::class,'index'])->name('Home');
 
 Route::get('/pages/{name}',[Homecontroller::class,'show'])->name('pages');
+
+Route::view('/dashboard','layouts.dashborad');
 
 
