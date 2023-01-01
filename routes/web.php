@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\dashboard\categoriescontroller;
 use App\Http\Controllers\Homecontroller;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -29,6 +30,8 @@ Route::get('/',[Homecontroller::class,'index'])->name('Home');
 
 Route::get('/pages/{name}',[Homecontroller::class,'show'])->name('pages');
 
-Route::view('/dashboard','layouts.dashborad');
+//Route::view('/dashboard','layouts.dashborad');
+Route::get('/dashboard/categories',[categoriescontroller::class,'index'])->name('dashboard.categories.index');
+
 
 
