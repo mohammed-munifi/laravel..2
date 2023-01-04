@@ -12,13 +12,17 @@ class categoriescontroller extends Controller
     public function index(){
         
         //SQL : SELECT * FROM  categories
+        //Return collection object (array)
 
         $categories=DB::table('categories')->orderBy('parent_id')->orderBy('name','ASC')
         ->get();
-
+ 
         return view('dashboard.categories.index',[
 
-            'categories'=>$categories,
+            'categories'=>$categories, // تمرير الداتا لملف الفيو
         ]);
+    }
+    public function create(){
+        return view('dashboard.categories.create');
     }
 }

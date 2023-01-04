@@ -32,6 +32,7 @@ Route::get('/pages/{name}',[Homecontroller::class,'show'])->name('pages');
 
 //Route::view('/dashboard','layouts.dashborad');
 Route::get('/dashboard/categories',[categoriescontroller::class,'index'])->name('dashboard.categories.index');
+Route::get('/dashboard/categories/create',[categoriescontroller::class,'create'])->name('dashboard.categories.create');
 
 
 
